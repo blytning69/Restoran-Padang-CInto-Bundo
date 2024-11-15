@@ -8,6 +8,10 @@ pesan = True
 jumlah_pemesanan_makanan = [0] * len(Menu_Makanan)
 jumlah_pemesanan_minuman = [0] * len(Menu_Minuman)
 jumlah_pemesanan_tambahan = [0] * len(Tambahan)
+pemesanan_makanan = True
+x = True
+pemesanan_minuman = True
+y = True
 
 while pesan:
     print("Selamat Datang Di Cinto Bundo!")
@@ -21,8 +25,6 @@ while pesan:
     print ("========================================")
 
     # Pemesanan Makanan
-    pemesanan_makanan = True
-    x = True
     while pemesanan_makanan:
         x = True
         pesanan_makanan = int(input("Pilih Makanan (0 untuk selesai): "))
@@ -39,7 +41,7 @@ while pesan:
             konfirmasi_pemesanan_makanan = input("Apakah ingin menambah makanan lagi? (y/n): ")
             while (konfirmasi_pemesanan_makanan != "y" and konfirmasi_pemesanan_makanan != "n"):
                 print("Silahkan mengisi y (jika ya) atau n (jika tidak) saja")
-                konfirmasi_tambahan = input("Apakah Anda ingin memesan makanan lagi? (y/n): ")
+                konfirmasi_pemesanan_makanan = input("Apakah Anda ingin memesan makanan lagi? (y/n): ")
             if konfirmasi_pemesanan_makanan == "n":
                 pemesanan_makanan = False
                 x = False
@@ -53,8 +55,7 @@ while pesan:
         print(f"|{i + 1}.|   {Menu_Minuman[i]:18}   | Rp{Harga_Minuman[i] : 7}|")
     print("========================================")
     # Pemesanan Minuman
-    pemesanan_minuman = True
-    y = True
+    
     while pemesanan_minuman:
         y = True # Tujuannya agar dapat masuk ke while x lagi untuk menanyakan customer apakah ingin memesan lagi
         pesanan_minuman = int(input("Pilih Minuman (0 untuk selesai): "))
